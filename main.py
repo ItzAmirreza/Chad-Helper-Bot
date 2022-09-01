@@ -12,7 +12,7 @@ intents = discord.Intents.all()
 intents.members = True
 loaded = False
 client = commands.Bot(command_prefix="-", help_command=None,
-                      intents=intents)
+                      intents=intents, owner_ids=[380086769204330497, 862761627651407922])
 
 
 async def load_cogs():

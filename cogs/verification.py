@@ -36,7 +36,7 @@ class Verification(commands.Cog):
                 "description": "Greetings! 👋\n\nWe provide support for the plugin as well as your suggestions, bug reports and sneak peaks into upcoming updates, GitHub logs, pre-released jars download links and the list goes on.\nAlso, it is a place for you to interact with the developers of the plugin.\n\nBefore continuing, make sure you have read <#1014618505129238568> as well as <#940910748031410236> for questions that are asked previously.\n\nYou may also pick some useful roles up after the verification in the **🤏│pick-roles** channel.\n\nFinally to verify yourself, **please click on the \"✅ Verify\"  button below this message. **",
                 "color": 16747146,
                 "author": {
-                    "name": "Welcome to the EZ Chest Shop plugin Discord server {name}",
+                    "name": "Welcome to the EZ Chest Shop plugin Discord server",
                     "icon_url": "https://cdn.discordapp.com/attachments/902981609240797264/1014785235365404672/New_ECS_emoji.png"
                 },
                 "footer": {
