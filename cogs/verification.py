@@ -17,15 +17,16 @@ class Verification(commands.Cog):
         client.add_view(self.VerifyView())
 
     class VerifyView(discord.ui.View):
+
         def __init__(self):
             super().__init__(timeout=None)
 
         @discord.ui.button(label="Verify", style=discord.ButtonStyle.green, custom_id=f"verify", emoji="✅")
         async def green(self, interaction: discord.Interaction, button: discord.ui.Button,):
             member = interaction.user
-            veirified_role = interaction.client.get_guild(
+            verified_role = interaction.client.get_guild(
                 902975048514678854).get_role(1014801316410818630)
-            await member.add_roles(verrified_role)
+            await member.add_roles(verified_role)
             await interaction.response.send_message("Welcome!, you have been verified!", ephemeral=True)
 
     @commands.Command(name="dummyverify")
