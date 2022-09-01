@@ -30,7 +30,7 @@ async def on_ready():
     print('Bot is ready.')
     # turn presence to watching "Chads"
     ecsguild = client.get_guild(902975048514678854)
-    await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=ecsguild.member_count + " Chads"))
+    await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=str(ecsguild.member_count) + " Chads"))
 
 asyncio.run(load_cogs())
 # run bot
