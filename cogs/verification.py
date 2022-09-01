@@ -53,3 +53,4 @@ class Verification(commands.Cog):
 
 async def setup(client):
     await client.add_cog(Verification(client))
+    print("Verification LOADED")
