@@ -7,6 +7,13 @@ from discord.ext import tasks, commands
 class PluginInformation(commands.Cog):
     def __init__(self, client):
         self.client = client
+        self.loaded = False
+
+    @commands.Cog.listener()
+    async def on_ready(self):
+        if self.loaded:
+            return
+        self.loaded = True
         self.update_plugin_information.start()
 
     @tasks.loop(seconds=60)
