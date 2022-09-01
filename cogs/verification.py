@@ -29,7 +29,7 @@ class Verification(commands.Cog):
             await member.add_roles(verified_role)
             await interaction.response.send_message("Welcome!, you have been verified!", ephemeral=True)
 
-    @commands.Command(name="dummyverify")
+    @commands.command(name="dummyverify")
     async def dummyverify(self, ctx):
         embed = discord.Embed.from_dict(
             {
