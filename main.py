@@ -16,13 +16,12 @@ client = commands.Bot(command_prefix="-", help_command=None,
 
 
 async def load_cogs():
-    client.load_extension('jishaku')
+    await client.load_extension('jishaku')
     print("Jishaku LOADED")
-    # for filename in os.listdir('./cogs'):
-    #     if filename.endswith('.py'):
-    #         await client.load_extension(f'cogs.{filename[:-3]}')
-    #         print(f'Loaded {filename}')
-    await client.load_extension('cogs.verification')
+    for filename in os.listdir('./cogs'):
+        if filename.endswith('.py'):
+            await client.load_extension(f'cogs.{filename[:-3]}')
+            print(f'Loaded {filename}')
     loaded = True
 
 
