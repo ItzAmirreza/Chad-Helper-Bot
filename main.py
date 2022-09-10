@@ -29,7 +29,7 @@ async def load_cogs():
 async def theloop():
     ecsguild = client.get_guild(902975048514678854)
     print("Changing presence")
-    await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=f"{len(ecsguild.member_count)} Chads"))
+    await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=f"{ecsguild.member_count} Chads"))
 
 
 @client.event
