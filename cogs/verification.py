@@ -50,6 +50,10 @@ class Verification(commands.Cog):
         view = self.VerifyView()
         await ctx.send(embed=embed, view=view)
 
+    @commands.command()
+    async def test(self, ctx):
+        print("Salam piaze golam")
+
 
 async def setup(client):
     await client.add_cog(Verification(client))
