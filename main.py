@@ -26,7 +26,7 @@ async def load_cogs():
 
 
 @tasks.loop(seconds=1000)
-async def loop():
+async def theloop():
     ecsguild = client.get_guild(902975048514678854)
     print("Changing presence")
     await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=f"{len(ecsguild.member_count)} Chads"))
@@ -37,8 +37,7 @@ async def on_ready():
     print('Bot is ready.')
     # turn presence to watching "Chads"
     ecsguild = client.get_guild(902975048514678854)
-    await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=str(ecsguild.member_count) + " Chads"))
-
+    theloop.start()
 asyncio.run(load_cogs())
 # run bot
 client.run(TOKEN)
