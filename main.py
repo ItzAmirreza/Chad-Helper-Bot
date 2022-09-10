@@ -1,5 +1,5 @@
 import discord
-from discord.ext import commands
+from discord.ext import commands, tasks
 import asyncio
 from dotenv import load_dotenv
 import os
@@ -23,6 +23,13 @@ async def load_cogs():
             await client.load_extension(f'cogs.{filename[:-3]}')
             print(f'Loaded {filename}')
     loaded = True
+
+
+@tasks.loop(seconds=1000)
+async def loop():
+    ecsguild = client.get_guild(902975048514678854)
+    print("Changing presence")
+    await client.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name=f"{len(ecsguild.member_count)} Chads"))
 
 
 @client.event
